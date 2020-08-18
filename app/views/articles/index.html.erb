@@ -1,0 +1,11 @@
+<h1>Wikinimous</h1>
+
+<ul>
+<% @articles.each do |element| %>
+  <li>    
+    <%= link_to "#{element.title}", "/articles/#{element.id}" %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to "Create an Article", "articles/new" %>

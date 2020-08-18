@@ -1,0 +1,8 @@
+<div>
+  <%= @article.title %>
+  <%= @article.content %>
+</div>
+<br>
+<%= link_to "Edit #{@article.title}", "/articles/#{@article.id}/edit" %>
+<%= link_to "Delete #{@article.title}", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to "back to list", "/articles" %>
